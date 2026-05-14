@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F7FA">
+
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#0D3B0D"
+        app:title="Bangun Ruang"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CARD JUDUL -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:elevation="4dp">
+
+                <TextView
+                    android:id="@+id/tvJudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#333"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvDeskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666"
+                    android:layout_marginBottom="16dp" />
+
+            </LinearLayout>
+
+            <!-- CARD SEGITIGA -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Luas Segitiga"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#222" />
+
+                <EditText
+                    android:id="@+id/etAlas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan alas"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etTinggi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan tinggi"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnHitungSegitiga"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hitung Luas Segitiga"
+                    android:backgroundTint="#0D3B0D"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvHasilSegitiga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <!-- CARD BALOK -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Volume Balok"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#222" />
+
+                <EditText
+                    android:id="@+id/etPanjang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan panjang"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etLebar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan lebar"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp" />
+
+                <EditText
+                    android:id="@+id/etTinggiBalok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Masukkan tinggi balok"
+                    android:padding="10dp"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/btnHitungBalok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hitung Volume Balok"
+                    android:backgroundTint="#0D3B0D"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="12dp" />
+
+                <TextView
+                    android:id="@+id/tvHasilBalok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
