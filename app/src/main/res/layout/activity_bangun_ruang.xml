@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F7FA">
+    android:background="#212121">
 
     <!-- TOOLBAR -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#0D3B0D"
+        android:background="#1B1B1B"
         app:title="Bangun Ruang"
         app:titleTextColor="@android:color/white" />
 
@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:background="@android:color/white"
+                android:background="#2C2C2C"
                 android:elevation="4dp">
 
                 <TextView
@@ -41,14 +41,14 @@
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
                     android:textStyle="bold"
-                    android:textColor="#333"
+                    android:textColor="#FFFFFF"
                     android:layout_marginBottom="8dp" />
 
                 <TextView
                     android:id="@+id/tvDeskripsi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#666"
+                    android:textColor="#BDBDBD"
                     android:layout_marginBottom="16dp" />
 
             </LinearLayout>
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:background="@android:color/white"
+                android:background="#2C2C2C"
                 android:elevation="4dp"
                 android:layout_marginTop="16dp">
 
@@ -69,13 +69,16 @@
                     android:text="Luas Segitiga"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#222" />
+                    android:textColor="#FFFFFF" />
 
                 <EditText
                     android:id="@+id/etAlas"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan alas"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9E9E9E"
+                    android:background="#424242"
                     android:padding="10dp"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp" />
@@ -85,6 +88,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan tinggi"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9E9E9E"
+                    android:background="#424242"
                     android:padding="10dp"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp" />
@@ -94,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hitung Luas Segitiga"
-                    android:backgroundTint="#0D3B0D"
+                    android:backgroundTint="#3949AB"
                     android:textColor="#FFFFFF"
                     android:layout_marginTop="12dp" />
 
@@ -103,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="#000"
+                    android:textColor="#FFFFFF"
                     android:layout_marginTop="8dp" />
 
             </LinearLayout>
@@ -114,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp"
-                android:background="@android:color/white"
+                android:background="#2C2C2C"
                 android:elevation="4dp"
                 android:layout_marginTop="16dp">
 
@@ -124,13 +130,16 @@
                     android:text="Volume Balok"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:textColor="#222" />
+                    android:textColor="#FFFFFF" />
 
                 <EditText
                     android:id="@+id/etPanjang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan panjang"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9E9E9E"
+                    android:background="#424242"
                     android:padding="10dp"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp" />
@@ -140,6 +149,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan lebar"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9E9E9E"
+                    android:background="#424242"
                     android:padding="10dp"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp" />
@@ -149,6 +161,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Masukkan tinggi balok"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#9E9E9E"
+                    android:background="#424242"
                     android:padding="10dp"
                     android:inputType="numberDecimal"
                     android:layout_marginTop="8dp" />
@@ -158,7 +173,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hitung Volume Balok"
-                    android:backgroundTint="#0D3B0D"
+                    android:backgroundTint="#26A69A"
                     android:textColor="#FFFFFF"
                     android:layout_marginTop="12dp" />
 
@@ -167,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
-                    android:textColor="#000"
+                    android:textColor="#FFFFFF"
                     android:layout_marginTop="8dp" />
 
             </LinearLayout>

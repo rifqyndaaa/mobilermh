@@ -3,102 +3,123 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/background">
+    android:background="#212121">
 
-    <!-- TOOLBAR - TAMBAHKAN INI -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="0dp"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/primary"
-        android:title="Bina Desa"
-        android:titleTextColor="@android:color/white"
+        android:background="#1B1B1B"
+        app:titleTextColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selamat Datang di Bina Desa"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="@color/text_primary"
-        android:layout_marginTop="16dp"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="20dp"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <!-- BUTTON 1 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBangunRuang"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Pertemuan 2: Bangun Ruang"
-        android:textColor="@color/white"
-        android:layout_marginTop="24dp"
-        app:backgroundTint="@color/primary"
-        app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-    <!-- BUTTON 2 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCustom1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Pertemuan 3: Custom 1"
-        android:textColor="@color/white"
-        android:layout_marginTop="12dp"
-        app:backgroundTint="@color/primary_dark"
-        app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnBangunRuang"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tvHomeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME DASHBOARD"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FF8A00"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- BUTTON 3 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCustom2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Pertemuan 4: Custom 2"
-        android:textColor="@color/white"
-        android:layout_marginTop="12dp"
-        app:backgroundTint="@color/accent"
-        app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnCustom1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tvHomeDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halaman utama aplikasi Bina Desa UMKM"
+                android:textSize="13sp"
+                android:textColor="#BDBDBD"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvHomeLabel"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- BUTTON 4 -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnWebsite"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Website Desa"
-        android:textColor="@color/white"
-        android:layout_marginTop="12dp"
-        app:backgroundTint="@color/teal_700"
-        app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnCustom2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="#444444"
+                app:layout_constraintTop_toBottomOf="@id/tvHomeDesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- LOGOUT -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textColor="@color/white"
-        android:layout_marginTop="32dp"
-        app:backgroundTint="@color/button_logout"
-        app:cornerRadius="12dp"
-        app:layout_constraintTop_toBottomOf="@id/btnWebsite"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang 👋"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#E0E0E0"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBangunRuang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="📐 Bangun Ruang"
+                android:layout_marginTop="28dp"
+                app:backgroundTint="#3949AB"
+                app:cornerRadius="14dp"
+                app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCustom2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="✨ Custom 2"
+                android:layout_marginTop="12dp"
+                app:backgroundTint="#26A69A"
+                app:cornerRadius="14dp"
+                app:layout_constraintTop_toBottomOf="@id/btnBangunRuang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWebsite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="🌐 Website Desa"
+                android:layout_marginTop="12dp"
+                app:backgroundTint="#FFB300"
+                app:cornerRadius="14dp"
+                app:layout_constraintTop_toBottomOf="@id/btnCustom2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="🚪 Logout"
+                android:layout_marginTop="28dp"
+                app:backgroundTint="#E53935"
+                app:cornerRadius="14dp"
+                app:layout_constraintTop_toBottomOf="@id/btnWebsite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

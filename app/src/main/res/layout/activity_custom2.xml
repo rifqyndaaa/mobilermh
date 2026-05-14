@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#212121">
 
     <ImageView
         android:id="@+id/ivGambar"
@@ -13,19 +14,25 @@
         android:layout_marginBottom="32dp"
         android:src="@drawable/logo" />
 
+    <!-- JUDUL -->
     <TextView
         android:id="@+id/tvJudul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="✨ Untuk Hari Ini"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp" />
 
+    <!-- DESKRIPSI -->
     <TextView
         android:id="@+id/tvDeskripsi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Hari ini adalah kesempatan baru untuk berkembang. Jangan takut gagal, karena setiap langkah kecil membawa kamu lebih dekat ke kesuksesan. Tetap semangat, terus belajar, dan jangan menyerah 💪"
         android:textSize="16sp"
+        android:textColor="#BDBDBD"
         android:gravity="center"
         android:textAlignment="center" />
 

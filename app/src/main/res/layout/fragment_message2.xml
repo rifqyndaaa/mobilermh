@@ -3,50 +3,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#212121"
     android:padding="20dp">
 
+    <!-- 🔥 HEADER ABOUT -->
+    <TextView
+        android:id="@+id/tvAboutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABOUT"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FF8A00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAboutSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tentang aplikasi Bina Desa"
+        android:textSize="13sp"
+        android:textColor="#BDBDBD"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tvAboutTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 🔥 DIVIDER -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#444444"
+        app:layout_constraintTop_toBottomOf="@id/tvAboutSub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- LOGO -->
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="32dp"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo"
+        android:padding="18dp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- TITLE -->
     <TextView
         android:id="@+id/tvTitleAbout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="18dp"
         android:text="Tentang Aplikasi Bina Desa"
-        android:textSize="22sp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvDescAbout"
+    <!-- CARD DESKRIPSI -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardAbout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="Aplikasi ini dikembangkan untuk membantu digitalisasi UMKM keripik tempe di Pekanbaru. Fokus utama adalah manajemen data produksi dan perhitungan dimensi kemasan menggunakan fitur Bangun Ruang."
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="#2C2C2C"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleAbout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitleAbout" />
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <TextView
+            android:id="@+id/tvDescAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center"
+            android:text="Aplikasi Bina Desa Digital ini merupakan inovasi teknologi yang dirancang khusus untuk mendukung digitalisasi dan modernisasi operasional UMKM Keripik Tempe di wilayah Pekanbaru.\n\nMelalui integrasi fitur manajemen data produksi, aplikasi ini memungkinkan pelaku usaha untuk memantau inventaris secara real-time. Selain itu, fitur unggulan perhitungan Bangun Ruang diimplementasikan untuk membantu optimasi dimensi kemasan produk (segitiga dan balok) guna meminimalisir biaya material serta meningkatkan daya tarik visual kemasan di pasar kompetitif."
+            android:textSize="15sp"
+            android:textColor="#E0E0E0"
+            android:lineSpacingExtra="4dp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- VERSION -->
     <TextView
+        android:id="@+id/tvVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:text="Version 1.0.0"
-        android:textColor="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="#9E9E9E"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cardAbout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
