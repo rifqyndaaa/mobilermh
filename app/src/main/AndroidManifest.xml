@@ -1,51 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- IZIN INTERNET -->
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Yanda"
         android:usesCleartextTraffic="true">
+
+        <!-- 🔥 REGISTER SUCCESS -->
+        <activity
+            android:name=".Home.pertemuan3.RegisterSuccessActivity"
+            android:exported="false" />
+
+        <!-- 🔥 REGISTER FLOW -->
+        <activity
+            android:name=".GmailInputActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- 🔵 LOGIN -->
+        <activity
+            android:name=".Home.pertemuan3.LoginActivity"
+            android:exported="false" />
+
+        <!-- 🔵 BASE NAV -->
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
-        <!-- WEBVIEW -->
+
+        <!-- 🌐 WEBVIEW -->
         <activity
             android:name=".WebViewActivity"
-            android:exported="false" /> <!-- SPLASH SCREEN -->
+            android:exported="false" />
+
+        <!-- 🚀 SPLASH (LAUNCHER) -->
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- LOGIN -->
-        <activity
-            android:name=".Home.pertemuan3.LoginActivity"
-            android:exported="false" /> <!-- MAIN -->
+        </activity>
+
+        <!-- MAIN -->
         <activity
             android:name=".MainActivity"
-            android:exported="false" /> <!-- BANGUN RUANG -->
+            android:exported="false" />
+
+        <!-- BANGUN RUANG -->
         <activity
             android:name=".Home.pertemuan2.BangunRuangActivity"
-            android:exported="false" /> <!-- CUSTOM 1 -->
-        <!-- CUSTOM 2 -->
+            android:exported="false" />
+
+        <!-- CUSTOM -->
         <activity
             android:name=".Home.pertemuan4.Custom2Activity"
-            android:exported="false" /> <!-- WELCOME -->
+            android:exported="false" />
+
+        <!-- WELCOME -->
         <activity
             android:name=".Home.pertemuan3.WelcomeActivity"
             android:exported="false" />
+
     </application>
 
 </manifest>

@@ -11,83 +11,97 @@
         android:padding="24dp"
         android:gravity="center_horizontal">
 
-        <!-- LOGO -->
-        <ImageView
-            android:id="@+id/imgLogo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/logo"
-            android:layout_marginBottom="20dp" />
-
-        <!-- Title -->
+        <!-- HEADER -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MyApp"
+            android:text="UMKM Digital"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:fontFamily="@font/roboto_condensed"
-            android:layout_marginBottom="8dp"/>
+            android:textColor="#FF8A00"
+            android:layout_marginBottom="6dp"/>
 
-        <!-- Subtitle -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Selamat datang 👋"
             android:textColor="#FFFFFF"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:fontFamily="@font/roboto_condensed" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:text="Sign in to continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in untuk melanjutkan"
             android:textSize="14sp"
             android:textColor="#BDBDBD"
-            android:layout_marginTop="6dp"
-            android:fontFamily="@font/roboto_condensed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_marginBottom="20dp"/>
 
-        <!-- Email -->
-        <EditText
-            android:id="@+id/etUsername"
-            android:hint="Email"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#9E9E9E"
-            android:background="@drawable/rounded_input_dark"
-            android:fontFamily="@font/roboto_condensed"
-            android:padding="12dp"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"/>
+        <!-- LOGO -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="24dp" />
 
-        <!-- Password -->
-        <EditText
-            android:id="@+id/etPassword"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#9E9E9E"
-            android:background="@drawable/rounded_input_dark"
-            android:fontFamily="@font/roboto_condensed"
-            android:padding="12dp"
-            android:layout_marginTop="12dp"
+        <!-- CARD CONTAINER -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#2C2C2C">
 
-        <!-- Button -->
-        <Button
-            android:id="@+id/btnLogin"
-            android:text="Sign in"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:fontFamily="@font/roboto_condensed"
-            android:backgroundTint="#FF8A00"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"/>
+            <!-- EMAIL -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:hint="Email"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:background="@drawable/rounded_input_dark"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- PASSWORD -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#9E9E9E"
+                android:background="@drawable/rounded_input_dark"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+            <!-- REGISTER -->
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Register with Gmail"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#4CAF50"
+                android:layout_marginTop="16dp"/>
+
+            <!-- LOGIN -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Sign in"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:backgroundTint="#FF8A00"
+                android:layout_marginTop="12dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
