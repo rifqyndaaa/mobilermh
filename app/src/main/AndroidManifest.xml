@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,63 +14,73 @@
         android:theme="@style/Theme.Yanda"
         android:usesCleartextTraffic="true">
 
-        <!-- 🔥 REGISTER SUCCESS -->
+        <!-- Splash Screen (Launcher) -->
         <activity
-            android:name=".Home.pertemuan3.RegisterSuccessActivity"
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!-- Main -->
+        <activity
+            android:name=".MainActivity"
             android:exported="false" />
 
-        <!-- 🔥 REGISTER FLOW -->
+        <!-- Base Navigation -->
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+
+        <!-- WebView -->
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+
+        <!-- ListView -->
+        <activity
+            android:name=".Home.ListActivity"
+            android:exported="false" />
+
+        <!-- Register Flow -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
         <activity
             android:name=".GmailInputActivity"
             android:exported="false" />
 
         <activity
-            android:name=".RegisterActivity"
+            android:name=".RegisterSuccessActivity"
             android:exported="false" />
 
-        <!-- 🔵 LOGIN -->
-        <activity
-            android:name=".Home.pertemuan3.LoginActivity"
-            android:exported="false" />
-
-        <!-- 🔵 BASE NAV -->
-        <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
-
-        <!-- 🌐 WEBVIEW -->
-        <activity
-            android:name=".WebViewActivity"
-            android:exported="false" />
-
-        <!-- 🚀 SPLASH (LAUNCHER) -->
-        <activity
-            android:name=".SplashScreenActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- MAIN -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-
-        <!-- BANGUN RUANG -->
+        <!-- Pertemuan 2 -->
         <activity
             android:name=".Home.pertemuan2.BangunRuangActivity"
             android:exported="false" />
 
-        <!-- CUSTOM -->
+        <!-- Pertemuan 3 -->
+        <activity
+            android:name=".Home.pertemuan3.LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Home.pertemuan3.WelcomeActivity"
+            android:exported="false" />
+
+        <!-- Pertemuan 4 -->
         <activity
             android:name=".Home.pertemuan4.Custom2Activity"
             android:exported="false" />
 
-        <!-- WELCOME -->
+        <!-- Pertemuan 10 -->
         <activity
-            android:name=".Home.pertemuan3.WelcomeActivity"
+            android:name=".Home.pertemuan10.TenthActivity"
             android:exported="false" />
 
     </application>

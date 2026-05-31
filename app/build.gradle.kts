@@ -21,7 +21,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    // ✅ INI YANG PENTING (biar ViewBinding jalan)
     buildFeatures {
         viewBinding = true
     }
@@ -43,9 +42,22 @@ android {
 }
 
 dependencies {
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+
+    // Material Design
+    implementation("com.google.android.material:material:1.11.0")
+
+    // GridLayout
+    implementation("androidx.gridlayout:gridlayout:1.0.0")
+
+    // RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
